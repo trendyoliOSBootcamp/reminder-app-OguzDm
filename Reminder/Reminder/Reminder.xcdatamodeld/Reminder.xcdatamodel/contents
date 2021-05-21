@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20E232" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="List" representedClassName="List" syncable="YES">
+        <attribute name="color" optional="YES" attributeType="String"/>
+        <attribute name="count" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="image" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="relation" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Remind" inverseName="relation" inverseEntity="Remind"/>
+    </entity>
+    <entity name="Remind" representedClassName="Remind" syncable="YES">
+        <attribute name="flagged" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="list" optional="YES" attributeType="String"/>
+        <attribute name="notes" optional="YES" attributeType="String"/>
+        <attribute name="priority" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="relation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="List" inverseName="relation" inverseEntity="List"/>
+    </entity>
+    <elements>
+        <element name="List" positionX="768.953125" positionY="-13.05859375" width="128" height="118"/>
+        <element name="Remind" positionX="288.6171875" positionY="-38.4609375" width="128" height="133"/>
+    </elements>
+</model>
